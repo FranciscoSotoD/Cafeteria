@@ -1,0 +1,52 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer {
+    background-color: v.$primario;
+    
+    .contenido-footer {
+        padding: 5rem;
+
+        @include m.mqTablet {
+            @include m.grid(3, 2rem)
+        }
+    }
+    .copyright {
+        text-align: center;
+        margin: 0;
+        color: v.$blanco;
+        padding: 3rem;
+    }
+}
+
+.footer-box {
+    font-family: v.$fuenteCursiva;
+    text-align: center;
+    margin-bottom: v.$separacion;
+    @include m.mqTablet {
+        margin-bottom: 0;
+    }
+    h3 {
+        font-family: v.$fuenteCursiva;
+        color: v.$secundario;
+        font-size: 2.4rem;
+        margin: 0 0 1rem 0;
+    }
+    p, a {
+        font-size: 2rem;
+        margin: 0;
+    }
+    .telefono {
+        margin-bottom: 2rem;
+    }
+    .llamar {
+        padding: 1rem 6rem;
+        background-color: #38b000;
+        border-radius: 2rem;
+        color: v.$blanco;
+        transition: background-color .3s;
+        &:hover {
+            background-color: #008000;
+        }
+    }
+}

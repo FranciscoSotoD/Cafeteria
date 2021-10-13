@@ -1,0 +1,16 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenido-menu {
+    
+    @include m.mqTablet {
+        @include m.grid(2, v.$separacion);
+        align-items: end;
+    }
+
+    .texto {
+        p {
+            font-size: 2rem;
+        }
+    }
+}
